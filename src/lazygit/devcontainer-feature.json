@@ -1,0 +1,22 @@
+{
+    "name": "Lazygit",
+    "id": "lazygit",
+    "version": "0.1.0",
+    "description": "Install Lazygit",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+              "0.44.1",
+              "0.44.0",
+              "0.43.1",
+              "0.43.0"
+            ],
+            "default": "latest",
+            "description": "Select a Lazygit version"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
