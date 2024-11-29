@@ -1,5 +1,5 @@
-#!/bin/sh
-set -x
+#!/bin/bash
+set -e
 
 VERSION="${VERSION:-"0.44.1"}"
 

@@ -7,7 +7,7 @@ Install Lazygit
 
 ```json
 "features": {
-    "ghcr.io/j2udev/devcontainers/features/lazygit:0": {}
+    "ghcr.io/j2udev/devcontainer-features/lazygit:0": {}
 }
 ```
 
@@ -15,7 +15,7 @@ Install Lazygit
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select a Lazygit version | string | latest |
+| version | Select a Lazygit version | string | 0.44.1 |
 
 
 
