@@ -38,6 +38,7 @@ configure_lazygit() {
     echo "alias lzg='lazygit'" >> "$_REMOTE_USER_HOME/.zshrc"
     echo "alias lzg='lazygit'" >> "$_CONTAINER_USER_HOME/.bashrc"
     echo "alias lzg='lazygit'" >> "$_CONTAINER_USER_HOME/.zshrc"
+  fi
 }
 
 install_lazygit
