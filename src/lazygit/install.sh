@@ -25,7 +25,8 @@ install_lazygit() {
 }
 
 configure_lazygit() {
-  cp config.yml $_CONTAINER_USER_HOME/.config/lazygit/config.yml
+  mkdir -p "$_REMOTE_USER_HOME/.config/lazygit"
+  cp config.yml "$_REMOTE_USER_HOME/.config/lazygit/config.yml"
 }
 
 install_lazygit
