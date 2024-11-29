@@ -1,0 +1,9 @@
+{
+    "name": "Dev Container Features",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+      "ghcr.io/j2udev/devcontainer-features/lazygit:latest": {}
+    }
+}
