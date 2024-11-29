@@ -29,8 +29,8 @@ configure_lazygit() {
   mkdir -p "$_CONTAINER_USER_HOME/.config/lazygit"
   cp config.yml "$_REMOTE_USER_HOME/.config/lazygit/config.yml"
   cp config.yml "$_CONTAINER_USER_HOME/.config/lazygit/config.yml"
-  echo "alias lzg="lazygit" >> "$_CONTAINER_USER_HOME/.zshrc"
-  echo "alias lzg="lazygit" >> "$_CONTAINER_USER_HOME/.bashrc"
+  echo "alias lzg='lazygit'" >> "$_CONTAINER_USER_HOME/.bashrc"
+  echo "alias lzg='lazygit'" >> "$_CONTAINER_USER_HOME/.zshrc"
 }
 
 install_lazygit
