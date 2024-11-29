@@ -24,4 +24,9 @@ install_lazygit() {
     curl -L "$url" | tar xzf - -C /usr/local/bin && chmod +x /usr/local/bin/lazygit
 }
 
+configure_lazygit() {
+  cp config.yml $_CONTAINER_USER_HOME/.config/lazygit/config.yml
+}
+
 install_lazygit
+configure_lazygit

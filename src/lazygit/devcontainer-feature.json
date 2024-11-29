@@ -1,6 +1,8 @@
 {
     "name": "Lazygit",
     "id": "lazygit",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/lazygit",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
     "version": "0.1.0",
     "description": "Install Lazygit",
     "options": {
