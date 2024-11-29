@@ -3,12 +3,12 @@
     "id": "lazygit",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/lazygit",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.2.4",
+    "version": "0.3.0",
     "description": "Install Lazygit",
     "options": {
         "version": {
             "type": "string",
-            "proposals": [
+            "enum": [
               "0.44.1",
               "0.44.0",
               "0.43.1",
@@ -16,6 +16,16 @@
             ],
             "default": "0.44.1",
             "description": "Select a Lazygit version"
+        },
+        "enable_config": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to create sane default config"
+        },
+        "enable_alias": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to create an alias for lazygit (lzg)"
         }
     },
     "installsAfter": [

@@ -16,6 +16,8 @@ Install Lazygit
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | version | Select a Lazygit version | string | 0.44.1 |
+| enable_config | Whether to create sane default config | boolean | true |
+| enable_alias | Whether to create an alias for lazygit (lzg) | boolean | true |
 
 
 
