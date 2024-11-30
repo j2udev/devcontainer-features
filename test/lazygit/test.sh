@@ -9,7 +9,7 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 source helpers.sh
-check "lazygit config exists" check_config
+check "check lazygit" check_lazygit
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.

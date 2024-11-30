@@ -19,12 +19,12 @@
         },
         "enable_config": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "Whether to create sane default config"
         },
         "enable_alias": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "Whether to create an alias for lazygit (lzg)"
         }
     },

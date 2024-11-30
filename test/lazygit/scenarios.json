@@ -1,0 +1,29 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "lazygit": {
+                "version": "0.44.0"
+            }
+        }
+    },
+    "check_config": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "lazygit": {
+                "enable_config": true
+            }
+        }
+    },
+    "check_alias": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "lazygit": {
+                "enable_alias": true
+            }
+        }
+    }
+}
