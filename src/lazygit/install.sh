@@ -1,10 +1,6 @@
 #!/bin/bash
 set -e
 
-VERSION="${VERSION:-"0.44.1"}"
-ENABLE_CONFIG="${ENABLE_CONFIG:-"true"}"
-ENABLE_ALIAS="${ENABLE_ALIAS:-"true"}"
-
 detect_os_arch() {
     OS="$(uname | tr '[:upper:]' '[:lower:]')"
     ARCH="$(uname -m)"
