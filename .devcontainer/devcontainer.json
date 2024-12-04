@@ -21,7 +21,8 @@
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/j2udev/devcontainer-features/lazygit:0": {
-          "enable_config": true
+          "enable_config": true,
+          "enable_alias": true
         }
     },
     "remoteUser": "node",
