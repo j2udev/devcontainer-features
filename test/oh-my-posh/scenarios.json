@@ -1,0 +1,11 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "oh-my-posh": {
+                "version": "24.17.0"
+            }
+        }
+    }
+}
