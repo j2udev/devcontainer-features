@@ -3,7 +3,7 @@
     "id": "oh-my-posh",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/oh-my-posh",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Install oh-my-posh",
     "options": {
         "version": {
