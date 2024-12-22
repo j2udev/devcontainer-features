@@ -1,0 +1,30 @@
+{
+    "name": "K9s",
+    "id": "k9s",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/k9s",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install K9s",
+    "options": {
+        "version": {
+            "type": "string",
+            "enum": [
+              "0.32.7",
+              "0.31.9",
+              "0.30.8",
+              "0.29.1",
+              "0.28.2"
+            ],
+            "default": "0.32.7",
+            "description": "Select a K9s version"
+        },
+        "enable_config": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether to create sane default config"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

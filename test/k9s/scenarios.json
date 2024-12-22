@@ -1,0 +1,29 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "k9s": {
+                "version": "0.31.9"
+            }
+        }
+    },
+    "check_config": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "k9s": {
+                "enable_config": true
+            }
+        }
+    },
+    "check_skins": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "k9s": {
+                "enable_config": true
+            }
+        }
+    }
+}
