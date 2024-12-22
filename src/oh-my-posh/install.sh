@@ -26,8 +26,8 @@ configure_oh_my_posh() {
   mkdir -p "${_CONTAINER_USER_HOME}/.config/oh-my-posh"
   cp "themes/${THEME}.omp.json" "${_REMOTE_USER_HOME}/.config/oh-my-posh"
   cp "themes/${THEME}.omp.json" "${_CONTAINER_USER_HOME}/.config/oh-my-posh"
-  echo "eval $(oh-my-posh init zsh -c ${_REMOTE_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)" >> "$_REMOTE_USER_HOME/.zshrc"
-  echo "eval $(oh-my-posh init zsh -c ${_CONTAINER_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)" >> "$_CONTAINER_USER_HOME/.zshrc"
+  echo "eval \$(oh-my-posh init zsh -c ${_REMOTE_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)" >> "$_REMOTE_USER_HOME/.zshrc"
+  echo "eval \$(oh-my-posh init zsh -c ${_CONTAINER_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)" >> "$_CONTAINER_USER_HOME/.zshrc"
 }
 
 install_oh_my_posh
