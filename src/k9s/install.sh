@@ -1,6 +1,5 @@
 #!/bin/bash
-# set -e
-set -x
+set -e
 
 detect_os_arch() {
   OS="$(uname | tr '[:upper:]' '[:lower:]')"
