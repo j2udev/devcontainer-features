@@ -20,6 +20,12 @@ For testing features, run the following from the root of the repo.
 devcontainer features test -i mcr.microsoft.com/devcontainers/base:jammy
 ```
 
+To test individual features, use the `-f` flag.
+
+```sh
+devcontainer features test -i mcr.microsoft.com/devcontainers/base:jammy -f k9s
+```
+
 ## References
 
 - [VSCode Blog about Features](https://code.visualstudio.com/blogs/2022/09/15/dev-container-features)
