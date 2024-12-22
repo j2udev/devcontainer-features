@@ -23,6 +23,9 @@
         "ghcr.io/j2udev/devcontainer-features/lazygit:0": {
           "enable_config": true,
           "enable_alias": true
+        },
+        "ghcr.io/j2udev/devcontainer-features/k9s:0": {
+          // "enable_config": true
         }
     },
     "remoteUser": "node",

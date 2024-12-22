@@ -18,7 +18,7 @@ detect_os_arch() {
 install_lazygit() {
   local os_arch=$(detect_os_arch)
   local url="https://github.com/jesseduffield/lazygit/releases/download/v${VERSION}/lazygit_${VERSION}_${os_arch}.tar.gz"
-  curl -L "$url" | tar xzf - -C /usr/local/bin && chmod +x /usr/local/bin/lazygit
+  curl -L "$url" | tar xzf - -C /usr/local/bin --wildcards 'lazygit' && chmod +x /usr/local/bin/lazygit
 }
 
 configure_lazygit() {
