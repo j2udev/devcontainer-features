@@ -1,0 +1,23 @@
+{
+    "name": "FZF",
+    "id": "fzf",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/fzf",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install FZF",
+    "options": {
+        "version": {
+            "type": "string",
+            "enum": [
+              "0.57.0"
+            ],
+            "default": "0.57.0",
+            "description": "Select a FZF version"
+        },
+        "enable_config": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to create sane default config"
+        }
+    }
+}
