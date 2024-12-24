@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+VERSION="${VERSION:-"0.32.7"}"
+
 detect_os_arch() {
   OS="$(uname | tr '[:upper:]' '[:lower:]')"
   ARCH="$(uname -m)"
