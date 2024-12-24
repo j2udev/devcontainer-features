@@ -16,7 +16,7 @@ Install oh-my-posh
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | version | Select an oh-my-posh version | string | 24.17.1 |
-| theme | Select an oh-my-posh theme | string | robbyrussell |
+| theme | Select an oh-my-posh theme | string | j2udev |
 
 
 
