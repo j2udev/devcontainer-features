@@ -17,10 +17,10 @@ configure_eza() {
   cp "themes/${THEME}.yml" "${_REMOTE_USER_HOME}/.config/eza/theme.yml"
   cp "themes/${THEME}.yml" "${_CONTAINER_USER_HOME}/.config/eza/theme.yml"
   if [ "$ENABLE_ALIAS" = "true" ]; then
-    echo "alias ls=eza" >> "${_REMOTE_USER_HOME}/.bashrc"
-    echo "alias ls=eza" >> "${_CONTAINER_USER_HOME}/.bashrc"
-    echo "alias ls=eza" >> "${_REMOTE_USER_HOME}/.zshrc"
-    echo "alias ls=eza" >> "${_CONTAINER_USER_HOME}/.zshrc"
+    echo "alias ls='eza --icons'" >> "${_REMOTE_USER_HOME}/.bashrc"
+    echo "alias ls='eza --icons'" >> "${_CONTAINER_USER_HOME}/.bashrc"
+    echo "alias ls='eza --icons'" >> "${_REMOTE_USER_HOME}/.zshrc"
+    echo "alias ls='eza --icons'" >> "${_CONTAINER_USER_HOME}/.zshrc"
   fi
 }
 
