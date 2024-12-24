@@ -1,0 +1,36 @@
+{
+    "name": "eza",
+    "id": "eza",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/eza",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install eza",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+              "0.20.13"
+            ],
+            "default": "0.20.13",
+            "description": "Select an eza version"
+        },
+        "theme": {
+          "type": "string",
+          "proposals": [
+            "catppuccin",
+            "dracula",
+            "frosty",
+            "gruvbox-dark",
+            "one_dark",
+            "tokyonight"
+          ],
+          "default": "tokyonight",
+          "description": "Select an eza theme"
+        },
+        "enable_alias": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to create ls aliases for eza"
+        }
+    }
+}
