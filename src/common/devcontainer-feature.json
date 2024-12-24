@@ -1,9 +1,0 @@
-{
-    "name": "Common",
-    "id": "common",
-    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/common",
-    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.1",
-    "description": "Install common config patterns",
-    "options": {}
-}
