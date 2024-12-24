@@ -1,13 +1,13 @@
 
-# FZF (fzf)
+# Oh My Posh (oh-my-posh)
 
-Install FZF
+Install oh-my-posh
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/j2udev/devcontainer-features/fzf:0": {}
+    "ghcr.io/j2udev/devcontainer-features/oh-my-posh:0": {}
 }
 ```
 
@@ -15,8 +15,8 @@ Install FZF
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select a FZF version | string | 0.57.0 |
-| enable_config | Whether to create sane default config | boolean | true |
+| version | Select an oh-my-posh version | string | 24.17.1 |
+| theme | Select an oh-my-posh theme | string | robbyrussell |
 
 
 

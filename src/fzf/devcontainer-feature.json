@@ -3,12 +3,12 @@
     "id": "fzf",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/fzf",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Install FZF",
     "options": {
         "version": {
             "type": "string",
-            "enum": [
+            "proposals": [
               "0.57.0"
             ],
             "default": "0.57.0",
