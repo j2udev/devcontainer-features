@@ -3,7 +3,7 @@
     "id": "oh-my-posh",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/oh-my-posh",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.4",
+    "version": "0.2.0",
     "description": "Install oh-my-posh",
     "options": {
         "version": {
@@ -17,11 +17,17 @@
         "theme": {
           "type": "string",
           "proposals": [
+            "j2udev",
             "robbyrussell",
             "bubbles",
-            "catppuccin"
+            "catppuccin",
+            "gruvbox",
+            "craver",
+            "sonicboom_light",
+            "sonicboom_dark",
+            "tonybaloney"
           ],
-          "default": "robbyrussell",
+          "default": "j2udev",
           "description": "Select an oh-my-posh theme"
         }
     }

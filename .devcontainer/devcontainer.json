@@ -25,7 +25,11 @@
           "enable_alias": true
         },
         "ghcr.io/j2udev/devcontainer-features/k9s:0": {
-          // "enable_config": true
+          "enable_config": true
+        },
+        "ghcr.io/j2udev/devcontainer-features/fzf:0": {},
+        "ghcr.io/j2udev/devcontainer-features/oh-my-posh:0": {
+          "theme": "gruvbox"
         }
     },
     "remoteUser": "node",
