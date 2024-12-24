@@ -1,0 +1,18 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "eza": {
+                "version": "0.20.12"
+            }
+        }
+    },
+    "check_theme": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+          "eza": {}
+        }
+    }
+}
