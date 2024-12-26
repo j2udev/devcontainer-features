@@ -1,0 +1,20 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "bat": {
+                "version": "0.23.0"
+            }
+        }
+    },
+    "check_theme": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+          "bat": {
+            "theme": "Nord"
+          }
+        }
+    }
+}
