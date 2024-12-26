@@ -7,5 +7,12 @@
                 "version": "24.17.0"
             }
         }
+    },
+    "check_lang": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "oh-my-posh": {}
+        }
     }
 }
