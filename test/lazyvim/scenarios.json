@@ -1,0 +1,11 @@
+{
+    "check_neovim_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "lazyvim": {
+                "neovim_version": "nightly"
+            }
+        }
+    }
+}
