@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-VERSION=${VERSION:-stable}
+VERSION=${VERSION:-"stable"}
 INSTALL_NEOVIM=${INSTALL_NEOVIM:-"true"}
 ENABLE_CONFIG=${ENABLE_CONFIG:-"true"}
 
