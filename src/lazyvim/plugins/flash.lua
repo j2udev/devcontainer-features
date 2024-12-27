@@ -1,5 +1,6 @@
 return {
   "folke/flash.nvim",
+  lazy = false,
   -- removing the 'S' keybind as it conflicts with vim.surround motions
   keys = {
     { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
