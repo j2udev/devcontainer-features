@@ -6,11 +6,11 @@ check_neovim() {
 }
 
 check_lazyvim() {
-  stat /home/vscode/.config/nvim/lazyvim.json
+  stat /home/vscode/.config/nvim/lua/config/keymaps.lua
   return $?
 }
 
 check_neovim_version() {
-  nvim --version | grep "\-dev" > /dev/null 2>&1
+  nvim --version | grep "0.10.2" > /dev/null 2>&1
   return $?
 }

@@ -4,7 +4,7 @@
         "remoteUser": "vscode",
         "features": {
             "lazyvim": {
-                "neovim_version": "nightly"
+                "neovim_version": "0.10.2"
             }
         }
     }

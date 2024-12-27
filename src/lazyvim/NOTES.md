@@ -1,0 +1,3 @@
+## Disclaimer
+
+This feature is only tested on Ubuntu and is mostly a vanilla lazyvim installation.  There are a few config options that are enabled by default to make the nvim experience more like the Vim VSCode extension with vim.surround and vim.easymotion options enabled.  The Vim extension hasn't done a great job of keeping up with Neovim plugins, but I'm more often in VSCode than Neovim so I've committed those keybindings to muscle memory.
