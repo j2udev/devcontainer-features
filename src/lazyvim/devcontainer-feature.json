@@ -3,13 +3,18 @@
     "id": "lazyvim",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/lazyvim",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "Install LazyVim",
     "options": {
         "install_neovim": {
             "type": "boolean",
             "default": true,
             "description": "Whether to install neovim"
+        },
+        "install_lazyvim": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to install lazyvim"
         },
         "neovim_version": {
             "type": "string",

@@ -1,6 +1,6 @@
 #!/bin/bash
-set -e
+set -x
 source dev-container-features-test-lib
 source helpers.sh
-check "check version" check_version
+check "check neovim version" check_neovim_version
 reportResults
