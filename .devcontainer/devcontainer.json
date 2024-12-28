@@ -1,6 +1,6 @@
 {
     "name": "Features",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+    "image": "mcr.microsoft.com/devcontainers/base:noble",
     "customizations": {
         "vscode": {
             "settings": {
@@ -20,18 +20,13 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/j2udev/devcontainer-features/lazygit:0": {
-          "enable_config": true,
-          "enable_alias": true
-        },
-        "ghcr.io/j2udev/devcontainer-features/k9s:0": {
-          "enable_config": true
-        },
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/j2udev/devcontainer-features/oh-my-posh:0": {},
+        "ghcr.io/j2udev/devcontainer-features/eza:0": {},
+        "ghcr.io/j2udev/devcontainer-features/bat:0": {},
         "ghcr.io/j2udev/devcontainer-features/fzf:0": {},
-        "ghcr.io/j2udev/devcontainer-features/oh-my-posh:0": {
-          "theme": "gruvbox"
-        }
+        "ghcr.io/j2udev/devcontainer-features/lazygit:0": {},
+        "ghcr.io/j2udev/devcontainer-features/lazyvim:0": {}
     },
-    "remoteUser": "node",
     "updateContentCommand": "npm install -g @devcontainers/cli"
 }
