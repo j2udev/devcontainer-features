@@ -8,30 +8,28 @@
     "options": {
         "version": {
             "type": "string",
-            "proposals": [
-              "0.24.0"
-            ],
+            "proposals": ["0.24.0"],
             "default": "0.24.0",
             "description": "Select a bat version"
         },
         "theme": {
-          "type": "string",
-          "proposals": [
-            "default",
-            "Dracula",
-            "GitHub",
-            "Monokai Extended",
-            "Nord",
-            "OneHalfDark",
-            "OneHalfLight",
-            "Solarized (dark)",
-            "Solarized (light)",
-            "TwoDark",
-            "gruvbox-dark",
-            "gruvbox-light"
-          ],
-          "default": "default",
-          "description": "Select a bat theme"
+            "type": "string",
+            "proposals": [
+                "default",
+                "Dracula",
+                "GitHub",
+                "gruvbox-dark",
+                "gruvbox-light",
+                "Monokai Extended",
+                "Nord",
+                "OneHalfDark",
+                "OneHalfLight",
+                "Solarized (dark)",
+                "Solarized (light)",
+                "TwoDark"
+            ],
+            "default": "default",
+            "description": "Select a bat theme"
         }
     }
 }
