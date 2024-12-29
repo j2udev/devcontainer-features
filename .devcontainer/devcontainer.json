@@ -6,15 +6,14 @@
             "settings": {
                 "json.schemas": [
                     {
-                        "fileMatch": [
-                            "*/devcontainer-feature.json"
-                        ],
+                        "fileMatch": ["*/devcontainer-feature.json"],
                         "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
                     }
                 ]
             },
             "extensions": [
-                "mads-hartmann.bash-ide-vscode"
+                "mads-hartmann.bash-ide-vscode",
+                "esbenp.prettier-vscode"
             ]
         }
     },
@@ -23,7 +22,9 @@
         "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/j2udev/devcontainer-features/oh-my-posh:0": {},
         "ghcr.io/j2udev/devcontainer-features/eza:0": {},
-        "ghcr.io/j2udev/devcontainer-features/bat:0": {},
+        "ghcr.io/j2udev/devcontainer-features/bat:0": {
+          "theme": "OneHalfDark"
+        },
         "ghcr.io/j2udev/devcontainer-features/fzf:0": {},
         "ghcr.io/j2udev/devcontainer-features/lazygit:0": {},
         "ghcr.io/j2udev/devcontainer-features/lazyvim:0": {}
