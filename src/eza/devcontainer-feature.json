@@ -8,24 +8,22 @@
     "options": {
         "version": {
             "type": "string",
-            "proposals": [
-              "0.20.13"
-            ],
+            "proposals": ["0.20.13"],
             "default": "0.20.13",
             "description": "Select an eza version"
         },
         "theme": {
-          "type": "string",
-          "proposals": [
-            "catppuccin",
-            "dracula",
-            "frosty",
-            "gruvbox-dark",
-            "one_dark",
-            "tokyonight"
-          ],
-          "default": "tokyonight",
-          "description": "Select an eza theme"
+            "type": "string",
+            "proposals": [
+                "catppuccin",
+                "dracula",
+                "frosty",
+                "gruvbox-dark",
+                "one_dark",
+                "tokyonight"
+            ],
+            "default": "tokyonight",
+            "description": "Select an eza theme"
         },
         "enable_alias": {
             "type": "boolean",

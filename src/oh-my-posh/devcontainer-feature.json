@@ -8,27 +8,25 @@
     "options": {
         "version": {
             "type": "string",
-            "proposals": [
-              "24.17.1"
-            ],
+            "proposals": ["24.17.1"],
             "default": "24.17.1",
             "description": "Select an oh-my-posh version"
         },
         "theme": {
-          "type": "string",
-          "proposals": [
-            "j2udev",
-            "robbyrussell",
-            "bubbles",
-            "catppuccin",
-            "gruvbox",
-            "craver",
-            "sonicboom_light",
-            "sonicboom_dark",
-            "tonybaloney"
-          ],
-          "default": "j2udev",
-          "description": "Select an oh-my-posh theme"
+            "type": "string",
+            "proposals": [
+                "bubbles",
+                "catppuccin",
+                "craver",
+                "gruvbox",
+                "j2udev",
+                "robbyrussell",
+                "sonicboom_light",
+                "sonicboom_dark",
+                "tonybaloney"
+            ],
+            "default": "j2udev",
+            "description": "Select an oh-my-posh theme"
         }
     }
 }
