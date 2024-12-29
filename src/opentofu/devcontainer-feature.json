@@ -1,0 +1,16 @@
+{
+    "name": "OpenTofu",
+    "id": "opentofu",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/opentofu",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install OpenTofu",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": ["1.8.8"],
+            "default": "1.8.8",
+            "description": "Select an OpenTofu version"
+        }
+    }
+}
