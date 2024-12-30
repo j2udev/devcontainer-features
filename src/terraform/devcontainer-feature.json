@@ -1,0 +1,16 @@
+{
+    "name": "Terraform",
+    "id": "terraform",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/terraform",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install Terraform",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": ["1.10.3"],
+            "default": "1.10.3",
+            "description": "Select a Terraform version"
+        }
+    }
+}
