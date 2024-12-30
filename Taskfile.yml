@@ -1,0 +1,5 @@
+version: '3'
+
+tasks:
+  test: devcontainer features test -i mcr.microsoft.com/devcontainers/base:noble -f {{.CLI_ARGS}}
+  docs: cd src && devcontainer features generate-docs -n j2udev/devcontainer-features
