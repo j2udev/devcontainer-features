@@ -23,11 +23,12 @@
         "ghcr.io/j2udev/devcontainer-features/oh-my-posh:0": {},
         "ghcr.io/j2udev/devcontainer-features/eza:0": {},
         "ghcr.io/j2udev/devcontainer-features/bat:0": {
-          "theme": "OneHalfDark"
+            "theme": "OneHalfDark"
         },
         "ghcr.io/j2udev/devcontainer-features/fzf:0": {},
         "ghcr.io/j2udev/devcontainer-features/lazygit:0": {},
-        "ghcr.io/j2udev/devcontainer-features/lazyvim:0": {}
+        "ghcr.io/j2udev/devcontainer-features/lazyvim:0": {},
+        "ghcr.io/j2udev/devcontainer-features/task:0": {}
     },
     "updateContentCommand": "npm install -g @devcontainers/cli"
 }
