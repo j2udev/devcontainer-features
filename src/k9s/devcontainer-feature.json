@@ -3,7 +3,7 @@
     "id": "k9s",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/k9s",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "Install K9s",
     "options": {
         "version": {
@@ -17,6 +17,18 @@
             ],
             "default": "0.32.7",
             "description": "Select a K9s version"
+        },
+        "theme": {
+            "type": "string",
+            "proposals": [
+                "dracula",
+                "gruvbox-dark",
+                "nord",
+                "one-dark",
+                "transparent"
+            ],
+            "default": "transparent",
+            "description": "Select a k9s theme"
         },
         "enable_config": {
             "type": "boolean",

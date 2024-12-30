@@ -2,6 +2,7 @@
 set -e
 
 VERSION="${VERSION:-"0.32.7"}"
+THEME="${THEME:-"transparent"}"
 
 detect_os_arch() {
   OS="$(uname | tr '[:upper:]' '[:lower:]')"
@@ -10,11 +11,18 @@ detect_os_arch() {
   case $ARCH in
       x86_64) ARCH="amd64" ;;
       armv8*|aarch64) ARCH="arm64" ;;
-      armv7*|armhf) ARCH="armv7" ;;
       *) echo "Unsupported architecture: $ARCH"; exit 1 ;;
   esac
 
   echo "${OS}_${ARCH}"
+}
+
+write_config() {
+  cat <<EOF > "${1}/.config/k9s/config.yaml"
+k9s:
+  ui:
+    skin: "${THEME}.yaml"
+EOF
 }
 
 install_k9s() {
@@ -27,10 +35,10 @@ configure_k9s() {
   if [ "$ENABLE_CONFIG" = "true" ]; then
     mkdir -p "$_REMOTE_USER_HOME/.config/k9s/skins"
     mkdir -p "$_CONTAINER_USER_HOME/.config/k9s/skins"
-    cp config.yaml "$_REMOTE_USER_HOME/.config/k9s/config.yaml"
-    cp config.yaml "$_CONTAINER_USER_HOME/.config/k9s/config.yaml"
-    cp skins/* "$_REMOTE_USER_HOME/.config/k9s/skins"
-    cp skins/* "$_CONTAINER_USER_HOME/.config/k9s/skins"
+    cp themes/* "$_REMOTE_USER_HOME/.config/k9s/skins"
+    cp themes/* "$_CONTAINER_USER_HOME/.config/k9s/skins"
+    write_config "$_REMOTE_USER_HOME"
+    write_config "$_CONTAINER_USER_HOME"
   fi
 }
 
