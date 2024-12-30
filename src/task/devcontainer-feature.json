@@ -1,0 +1,16 @@
+{
+    "name": "Task",
+    "id": "task",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/task",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install Task",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": ["3.40.1"],
+            "default": "3.40.1",
+            "description": "Select a Task version"
+        }
+    }
+}
