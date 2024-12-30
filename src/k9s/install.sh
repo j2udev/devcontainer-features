@@ -24,7 +24,7 @@ write_config() {
   cat <<EOF > "${1}/.config/k9s/config.yaml"
 k9s:
   ui:
-    skin: "${THEME}.yaml"
+    skin: "${THEME}"
 EOF
 }
 
