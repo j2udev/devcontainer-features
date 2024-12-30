@@ -1,0 +1,21 @@
+{
+    "name": "Ansible",
+    "id": "ansible",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/ansible",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install Ansible",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": ["11.1.0"],
+            "default": "11.1.0",
+            "description": "Select an Ansible Community Package version; https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#ansible-community-changelogs"
+        },
+        "install_pipx": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to install pipx"
+        }
+    }
+}
