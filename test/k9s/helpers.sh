@@ -16,6 +16,6 @@ check_config() {
 }
 
 check_theme() {
-  grep "nord.yaml" "/home/vscode/.config/k9s/config.yaml" > /dev/null 2>&1
+  grep "nord" "/home/vscode/.config/k9s/config.yaml" > /dev/null 2>&1
   return $?
 }
