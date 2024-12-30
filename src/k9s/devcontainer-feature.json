@@ -3,7 +3,7 @@
     "id": "k9s",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/k9s",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Install K9s",
     "options": {
         "version": {
@@ -32,7 +32,7 @@
         },
         "enable_config": {
             "type": "boolean",
-            "default": false,
+            "default": true,
             "description": "Whether to create sane default config"
         }
     },

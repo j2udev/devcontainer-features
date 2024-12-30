@@ -1,8 +1,11 @@
 #!/bin/bash
-set -e
+set -x
 
 VERSION="${VERSION:-"0.32.7"}"
+ENABLE_CONFIG="${ENABLE_CONFIG:-"true"}"
 THEME="${THEME:-"transparent"}"
+_REMOTE_USER_HOME="${_REMOTE_USER_HOME:-"/home/vscode"}"
+_CONTAINER_USER_HOME="${_CONTAINER_USER_HOME:-"/home/vscode"}"
 
 detect_os_arch() {
   OS="$(uname | tr '[:upper:]' '[:lower:]')"
