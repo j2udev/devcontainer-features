@@ -17,12 +17,13 @@
             }
         }
     },
-    "check_skins": {
+    "check_theme": {
         "image": "mcr.microsoft.com/devcontainers/base:jammy",
         "remoteUser": "vscode",
         "features": {
             "k9s": {
-                "enable_config": true
+                "enable_config": true,
+                "theme": "nord"
             }
         }
     }

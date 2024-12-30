@@ -16,6 +16,7 @@ Install K9s
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | version | Select a K9s version | string | 0.32.7 |
+| theme | Select a k9s theme | string | transparent |
 | enable_config | Whether to create sane default config | boolean | false |
 
 

@@ -15,7 +15,7 @@ check_config() {
   return $?
 }
 
-check_skins() {
-  stat "/home/vscode/.config/k9s/skins/transparent.yaml" > /dev/null 2>&1
+check_theme() {
+  stat "/home/vscode/.config/k9s/skins/nord.yaml" > /dev/null 2>&1
   return $?
 }
