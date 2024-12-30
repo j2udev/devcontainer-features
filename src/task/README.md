@@ -1,13 +1,13 @@
 
-# OpenTofu (opentofu)
+# Task (task)
 
-Install OpenTofu
+Install Task
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/j2udev/devcontainer-features/opentofu:0": {}
+    "ghcr.io/j2udev/devcontainer-features/task:0": {}
 }
 ```
 
@@ -15,7 +15,7 @@ Install OpenTofu
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select an OpenTofu version | string | 1.8.8 |
+| version | Select a Task version | string | 3.40.1 |
 
 
 
