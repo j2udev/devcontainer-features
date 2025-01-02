@@ -1,0 +1,19 @@
+{
+    "name": "Kubectl",
+    "id": "kubectl",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/kubectl",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install Kubectl",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+              "latest",
+              "1.32.0"
+            ],
+            "default": "latest",
+            "description": "Select a Kubectl version"
+        }
+    }
+}
