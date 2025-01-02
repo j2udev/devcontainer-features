@@ -22,4 +22,9 @@ install_terragrunt() {
   curl -Lo /usr/local/bin/terragrunt "$url" && chmod +x /usr/local/bin/terragrunt
 }
 
+install_completions() {
+  terragrunt --install-autocomplete
+}
+
 install_terragrunt
+install_completions
