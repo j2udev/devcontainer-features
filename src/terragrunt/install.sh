@@ -23,7 +23,9 @@ install_terragrunt() {
 }
 
 install_completion() {
-  echo "autoload -U +X bashcompinit && bashcompinit" >> "$1"
+  if ! grep -Fxq "autoload -U +X bashcompinit && bashcompinit" "$1"; then
+    echo "autoload -U +X bashcompinit && bashcompinit" >> "$1"
+  fi
   echo "complete -o nospace -C /usr/local/bin/terragrunt terragrunt" >> "$1"
 }
 
