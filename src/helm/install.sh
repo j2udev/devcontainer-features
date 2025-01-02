@@ -26,4 +26,10 @@ install_helm() {
   curl -L "$url" | tar xzf - -C /opt && ln -s /opt/$(get_os)-$(get_arch)/helm /usr/local/bin/helm
 }
 
+install_completions() {
+  echo "source <(helm completion zsh)" >> "${_REMOTE_USER_HOME}/.zshrc"
+  echo "source <(helm completion zsh)" >> "${_CONTAINER_USER_HOME}/.zshrc"
+}
+
 install_helm
+install_completions

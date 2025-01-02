@@ -31,4 +31,10 @@ install_kubectl() {
   curl -Lo /usr/local/bin/kubectl "$url" && chmod +x /usr/local/bin/kubectl
 }
 
+install_completions() {
+  echo "source <(kubectl completion zsh)" >> "${_REMOTE_USER_HOME}/.zshrc"
+  echo "source <(kubectl completion zsh)" >> "${_CONTAINER_USER_HOME}/.zshrc"
+}
+
 install_kubectl
+install_completions
