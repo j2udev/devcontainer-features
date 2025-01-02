@@ -14,12 +14,12 @@ install_bat() {
 configure_bat() {
   echo "alias bat='bat --theme=${THEME}'" >> "${_REMOTE_USER_HOME}/.bashrc"
   echo "alias bat='bat --theme=${THEME}'" >> "${_CONTAINER_USER_HOME}/.bashrc"
-  echo "alias cat='bat -p --theme=${THEME}'" >> "${_REMOTE_USER_HOME}/.bashrc"
-  echo "alias cat='bat -p --theme=${THEME}'" >> "${_CONTAINER_USER_HOME}/.bashrc"
+  echo "alias cat='bat -Pp --theme=${THEME}'" >> "${_REMOTE_USER_HOME}/.bashrc"
+  echo "alias cat='bat -Pp --theme=${THEME}'" >> "${_CONTAINER_USER_HOME}/.bashrc"
   echo "alias bat='bat --theme=${THEME}'" >> "${_REMOTE_USER_HOME}/.zshrc"
   echo "alias bat='bat --theme=${THEME}'" >> "${_CONTAINER_USER_HOME}/.zshrc"
-  echo "alias cat='bat -p --theme=${THEME}'" >> "${_REMOTE_USER_HOME}/.zshrc"
-  echo "alias cat='bat -p --theme=${THEME}'" >> "${_CONTAINER_USER_HOME}/.zshrc"
+  echo "alias cat='bat -Pp --theme=${THEME}'" >> "${_REMOTE_USER_HOME}/.zshrc"
+  echo "alias cat='bat -Pp --theme=${THEME}'" >> "${_CONTAINER_USER_HOME}/.zshrc"
 }
 
 install_bat
