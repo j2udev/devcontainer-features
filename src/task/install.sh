@@ -19,7 +19,7 @@ detect_os_arch() {
 install_task() {
   local os_arch=$(detect_os_arch)
   local url="https://github.com/go-task/task/releases/download/v${VERSION}/task_${os_arch}.tar.gz"
-  curl -L "$url" | tar xzf - -C /usr/local/bin
+  curl -L "$url" | tar xzf - -C /usr/local/bin --wildcards 'task'
 }
 
 install_task
