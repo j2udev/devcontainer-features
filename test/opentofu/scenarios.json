@@ -7,5 +7,12 @@
                 "version": "1.8.7"
             }
         }
+    },
+    "check_completion": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "opentofu": {}
+        }
     }
 }
