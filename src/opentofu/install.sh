@@ -22,4 +22,8 @@ install_opentofu() {
   curl -L "$url" | tar xzf - -C /usr/local/bin
 }
 
+install_completions() {
+  tofu -install-autocomplete
+}
+
 install_opentofu
