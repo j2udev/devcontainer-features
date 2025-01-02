@@ -22,8 +22,16 @@ install_terragrunt() {
   curl -Lo /usr/local/bin/terragrunt "$url" && chmod +x /usr/local/bin/terragrunt
 }
 
+install_completion() {
+  echo "autoload -U +X bashcompinit && bashcompinit" >> "$1"
+  echo "complete -o nospace -C /usr/local/bin/terragrunt terragrunt" >> "$1"
+}
+
 install_completions() {
-  terragrunt --install-autocomplete
+  install_completion "${_REMOTE_USER_HOME}/.zshrc"
+  install_completion "${_CONTAINER_USER_HOME}/.zshrc"
+  install_completion "${_REMOTE_USER_HOME}/.bashrc"
+  install_completion "${_CONTAINER_USER_HOME}/.bashrc"
 }
 
 install_terragrunt
