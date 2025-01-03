@@ -1,5 +1,5 @@
-#!/bin/sh
-set -e
+#!/bin/bash
+set -euo pipefail
 
 NEOVIM_VERSION=${NEOVIM_VERSION:-"stable"}
 INSTALL_NEOVIM=${INSTALL_NEOVIM:-"true"}

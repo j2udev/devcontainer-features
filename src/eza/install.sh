@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -euo pipefail
 
 VERSION="${VERSION:-"0.20.13"}"
 THEME="${THEME:-"tokyonight"}"

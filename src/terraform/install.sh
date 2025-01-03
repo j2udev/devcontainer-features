@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -euo pipefail
 
 VERSION="${VERSION:-"1.10.3"}"
 

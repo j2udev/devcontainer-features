@@ -16,8 +16,6 @@ check_config() {
 }
 
 check_alias() {
-  source /home/vscode/.zshrc > /dev/null 2>&1
-  source /home/vscode/.bashrc  > /dev/null 2>&1
-  alias lzg  > /dev/null 2>&1
+  grep "alias lzg='lazygit'" /home/vscode/.zshrc
   return $?
 }

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -euo pipefail
 
 VERSION="${VERSION:-"3.16.4"}"
 _REMOTE_USER_HOME="${_REMOTE_USER_HOME:-"/home/vscode"}"
