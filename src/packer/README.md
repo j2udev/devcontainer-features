@@ -1,5 +1,5 @@
 
-# Packer (Packer)
+# Packer (packer)
 
 Install Packer
 
@@ -7,7 +7,7 @@ Install Packer
 
 ```json
 "features": {
-    "ghcr.io/j2udev/devcontainer-features/Packer:0": {}
+    "ghcr.io/j2udev/devcontainer-features/packer:0": {}
 }
 ```
 
