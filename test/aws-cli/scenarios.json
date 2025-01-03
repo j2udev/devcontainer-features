@@ -1,0 +1,9 @@
+{
+    "check_completion": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "aws-cli": {}
+        }
+    }
+}
