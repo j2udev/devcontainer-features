@@ -1,0 +1,22 @@
+{
+    "name": "Packer",
+    "id": "Packer",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/packer",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install Packer",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": ["1.11.2"],
+            "default": "1.11.2",
+            "description": "Select a Packer version"
+        },
+        "bin_dir": {
+            "type": "string",
+            "proposals": ["/usr/local/bin"],
+            "default": "/usr/local/bin",
+            "description": "Select a directory that is on your PATH"
+        }
+    }
+}
