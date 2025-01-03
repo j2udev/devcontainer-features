@@ -1,5 +1,10 @@
 version: '3'
 
 tasks:
-  test: devcontainer features test -i mcr.microsoft.com/devcontainers/base:noble -f {{.CLI_ARGS}}
+  test:
+    vars:
+      FLAGS: |
+        {{ if .CLI_ARGS }}-f {{.CLI_ARGS}}{{ end }}
+    cmds:
+      - devcontainer features test -i mcr.microsoft.com/devcontainers/base:noble {{.FLAGS}}
   docs: cd src && devcontainer features generate-docs -n j2udev/devcontainer-features

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -euo pipefail
 
 VERSION="${VERSION:-"0.32.7"}"
 ENABLE_CONFIG="${ENABLE_CONFIG:-"true"}"

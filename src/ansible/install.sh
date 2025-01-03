@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 VERSION="${VERSION:-"11.1.0"}"
 INSTALL_PIPX="${INSTALL_PIPX:-"true"}"

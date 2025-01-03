@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 detect_os_arch() {
   OS="$(uname | tr '[:upper:]' '[:lower:]')"
