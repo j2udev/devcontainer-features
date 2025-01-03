@@ -15,6 +15,8 @@ Install Ansible
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
+| bin_dir | Select a directory that is on your PATH | string | /usr/local/bin |
+| install_dir | Select a directory where supplementary files will be saved | string | /opt |
 | version | Select an Ansible Community Package version; https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#ansible-community-changelogs | string | 11.1.0 |
 | install_pipx | Whether to install pipx | boolean | true |
 
