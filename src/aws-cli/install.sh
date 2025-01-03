@@ -8,7 +8,7 @@ _CONTAINER_USER_HOME="${_CONTAINER_USER_HOME:-"/home/vscode"}"
 
 get_os() {
   local os="$(uname | tr '[:upper:]' '[:lower:]')"
-  echo "$os"
+  echo "${os}"
 }
 
 get_arch() {
