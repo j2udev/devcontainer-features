@@ -1,0 +1,18 @@
+{
+    "name": "Zarf",
+    "id": "zarf",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/zarf",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install Zarf",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+              "0.45.0"
+            ],
+            "default": "0.45.0",
+            "description": "Select a Zarf version"
+        }
+    }
+}
