@@ -1,6 +1,6 @@
 {
     "name": "Packer",
-    "id": "Packer",
+    "id": "packer",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/packer",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
     "version": "0.1.0",
