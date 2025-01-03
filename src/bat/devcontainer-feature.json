@@ -3,9 +3,25 @@
     "id": "bat",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/bat",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Install bat",
     "options": {
+        "bin_dir": {
+            "type": "string",
+            "proposals": [
+              "/usr/local/bin"
+            ],
+            "default": "/usr/local/bin",
+            "description": "Select a directory that is on your PATH"
+        },
+        "install_dir": {
+            "type": "string",
+            "proposals": [
+              "/opt"
+            ],
+            "default": "/opt",
+            "description": "Select a directory where supplementary files will be saved"
+        },
         "version": {
             "type": "string",
             "proposals": ["0.24.0"],

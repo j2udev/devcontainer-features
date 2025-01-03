@@ -15,6 +15,8 @@ Install bat
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
+| bin_dir | Select a directory that is on your PATH | string | /usr/local/bin |
+| install_dir | Select a directory where supplementary files will be saved | string | /opt |
 | version | Select a bat version | string | 0.24.0 |
 | theme | Select a bat theme | string | default |
 
