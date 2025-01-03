@@ -1,0 +1,18 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "packer": {
+                "version": "1.11.1"
+            }
+        }
+    },
+    "check_completion": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "packer": {}
+        }
+    }
+}
