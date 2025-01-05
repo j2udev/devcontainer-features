@@ -3,9 +3,17 @@
     "id": "direnv",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/direnv",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Install Direnv",
     "options": {
+        "bin_dir": {
+            "type": "string",
+            "proposals": [
+              "/usr/local/bin"
+            ],
+            "default": "/usr/local/bin",
+            "description": "Select a directory that is on your PATH"
+        },
         "version": {
             "type": "string",
             "proposals": [
