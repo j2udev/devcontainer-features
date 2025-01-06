@@ -1,0 +1,25 @@
+{
+    "name": "Bash IDE",
+    "id": "bash-ide",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/bash-ide",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install a Bash IDE",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "[shellscript]": {
+            "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+          }
+        },
+        "extensions": [
+          "mads-hartmann.bash-ide-vscode",
+          "esbenp.prettier-vscode"
+        ]
+      }
+    },
+    "dependsOn": {
+        "ghcr.io/j2udev/devcontainer-features/shellcheck:0": {},
+        "ghcr.io/j2udev/devcontainer-features/shfmt:0": {}
+    }
+}
