@@ -1,0 +1,11 @@
+{
+    "check_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "remoteUser": "vscode",
+        "features": {
+            "shellcheck": {
+                "version": "0.9.0"
+            }
+        }
+    }
+}

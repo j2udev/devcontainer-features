@@ -1,0 +1,34 @@
+{
+    "name": "ShellCheck",
+    "id": "shellcheck",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/shellcheck",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install ShellCheck",
+    "options": {
+        "bin_dir": {
+            "type": "string",
+            "proposals": [
+              "/usr/local/bin"
+            ],
+            "default": "/usr/local/bin",
+            "description": "Select a directory that is on your PATH"
+        },
+        "install_dir": {
+            "type": "string",
+            "proposals": [
+              "/opt"
+            ],
+            "default": "/opt",
+            "description": "Select a directory where supplementary files will be saved"
+        },
+        "version": {
+            "type": "string",
+            "proposals": [
+              "0.10.0"
+            ],
+            "default": "0.10.0",
+            "description": "Select a ShellCheck version"
+        }
+    }
+}
