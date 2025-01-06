@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Installing shellcheck, shfmt, and the Bash IDE VSCode extension"
+echo "Installing shellcheck, shfmt, and VSCode extensions and settings"
