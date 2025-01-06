@@ -3,7 +3,7 @@
     "id": "terragrunt-ide",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/terragrunt-ide",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Install a Terragrunt IDE",
     "customizations": {
       "vscode": {
@@ -25,6 +25,7 @@
     },
     "dependsOn": {
         "ghcr.io/j2udev/devcontainer-features/opentofu:0": {},
-        "ghcr.io/j2udev/devcontainer-features/terragrunt:0": {}
+        "ghcr.io/j2udev/devcontainer-features/terragrunt:0": {},
+        "ghcr.io/j2udev/devcontainer-features/direnv:0": {}
     }
 }
