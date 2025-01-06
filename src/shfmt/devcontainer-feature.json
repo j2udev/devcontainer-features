@@ -1,0 +1,26 @@
+{
+    "name": "shfmt",
+    "id": "shfmt",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/shfmt",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install shfmt",
+    "options": {
+        "bin_dir": {
+            "type": "string",
+            "proposals": [
+              "/usr/local/bin"
+            ],
+            "default": "/usr/local/bin",
+            "description": "Select a directory that is on your PATH"
+        },
+        "version": {
+            "type": "string",
+            "proposals": [
+              "3.10.0"
+            ],
+            "default": "3.10.0",
+            "description": "Select a shfmt version"
+        }
+    }
+}
