@@ -3,7 +3,7 @@
     "id": "bat",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/bat",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Install bat",
     "options": {
         "bin_dir": {
