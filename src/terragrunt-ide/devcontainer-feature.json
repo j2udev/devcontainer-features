@@ -1,0 +1,30 @@
+{
+    "name": "Terragrunt IDE",
+    "id": "terragrunt-ide",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/terragrunt-ide",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install a Terragrunt IDE",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "emeraldwalk.runonsave": {
+              "commands": [
+                  {
+                      "match": "\\.hcl$",
+                      "cmd": "terragrunt hclfmt --terragrunt-hclfmt-file ${file}"
+                  }
+              ]
+          }
+        },
+        "extensions": [
+          "4ops.terraform",
+          "emeraldwalk.runonsave"
+        ]
+      }
+    },
+    "dependsOn": {
+        "ghcr.io/j2udev/devcontainer-features/opentofu:0": {},
+        "ghcr.io/j2udev/devcontainer-features/terragrunt:0": {}
+    }
+}
