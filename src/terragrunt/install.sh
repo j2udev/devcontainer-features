@@ -1,25 +1,31 @@
 #!/bin/bash
 set -euo pipefail
 
+BIN_DIR="${BIN_DIR:-"/usr/local/bin"}"
 VERSION="${VERSION:-"0.71.1"}"
 
-detect_os_arch() {
-  OS="$(uname | tr '[:upper:]' '[:lower:]')"
-  ARCH="$(uname -m)"
 
-  case $ARCH in
-      x86_64) ARCH="amd64" ;;
-      armv8*|aarch64) ARCH="arm64" ;;
-      *) echo "Unsupported architecture: $ARCH"; exit 1 ;;
+get_os() {
+  local os
+  os="$(uname | tr '[:upper:]' '[:lower:]')"
+  echo "${os}"
+}
+
+get_arch() {
+  local arch
+  arch="$(uname -m)"
+  case "${arch}" in
+      x86_64) arch="amd64" ;;
+      aarch64) arch="arm64" ;;
+      *) echo "Unsupported architecture: ${arch}"; exit 1 ;;
   esac
-
-  echo "${OS}_${ARCH}"
+  echo "${arch}"
 }
 
 install_terragrunt() {
-  local os_arch=$(detect_os_arch)
-  local url="https://github.com/gruntwork-io/terragrunt/releases/download/v${VERSION}/terragrunt_${os_arch}"
-  curl -Lo /usr/local/bin/terragrunt "$url" && chmod +x /usr/local/bin/terragrunt
+  local url
+  url="https://github.com/gruntwork-io/terragrunt/releases/download/v${VERSION}/terragrunt_$(get_os)_$(get_arch)"
+  curl -Lo "${BIN_DIR}/terragrunt" "${url}" && chmod +x "${BIN_DIR}/terragrunt"
 }
 
 install_completion() {
