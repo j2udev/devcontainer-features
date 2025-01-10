@@ -15,6 +15,7 @@ Install Terragrunt
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
+| bin_dir | Select a directory that is on your PATH | string | /usr/local/bin |
 | version | Select a Terragrunt version | string | 0.71.1 |
 
 
