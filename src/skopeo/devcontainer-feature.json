@@ -3,7 +3,16 @@
     "id": "skopeo",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/skopeo",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Install Skopeo",
-    "options": {}
+    "options": {
+        "registry_auth_file": {
+            "type": "string",
+            "proposals": [
+              "~/.docker/config.json"
+            ],
+            "default": "~/.docker/config.json",
+            "description": "Select a path to your registry authentication file"
+        }
+    }
 }

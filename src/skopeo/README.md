@@ -15,7 +15,7 @@ Install Skopeo
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-
+| registry_auth_file | Select a path to your registry authentication file | string | ~/.docker/config.json |
 
 
 
