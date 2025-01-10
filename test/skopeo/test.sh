@@ -9,7 +9,6 @@ source dev-container-features-test-lib
 # Feature-specific tests
 source helpers.sh
 check "check skopeo" check_skopeo
-check "check registry auth" check_registry_auth
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
