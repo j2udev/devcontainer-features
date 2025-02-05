@@ -15,6 +15,7 @@ Install oh-my-posh
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
+| bin_dir | Select a directory that is on your PATH | string | /usr/local/bin |
 | version | Select an oh-my-posh version | string | 24.17.1 |
 | theme | Select an oh-my-posh theme | string | j2udev |
 

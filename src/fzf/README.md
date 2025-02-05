@@ -15,6 +15,7 @@ Install FZF
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
+| bin_dir | Select a directory that is on your PATH | string | /usr/local/bin |
 | version | Select a FZF version | string | 0.57.0 |
 | enable_config | Whether to create sane default config | boolean | true |
 

@@ -1,35 +1,46 @@
 #!/bin/bash
 set -euo pipefail
 
+BIN_DIR="${BIN_DIR:-"/usr/local/bin"}"
 VERSION="${VERSION:-"0.57.0"}"
+_REMOTE_USER_HOME="${_REMOTE_USER_HOME:-"/home/vscode"}"
+_CONTAINER_USER_HOME="${_CONTAINER_USER_HOME:-"/home/vscode"}"
 
-detect_os_arch() {
-  OS="$(uname | tr '[:upper:]' '[:lower:]')"
-  ARCH="$(uname -m)"
+shells=("zsh" "bash")
+homes=("${_REMOTE_USER_HOME}" "${_CONTAINER_USER_HOME}")
 
-  case $ARCH in
-      x86_64) ARCH="amd64" ;;
-      armv8*|aarch64) ARCH="arm64" ;;
-      armv7*|armhf) ARCH="armv7" ;;
-      *) echo "Unsupported architecture: $ARCH"; exit 1 ;;
+get_os() {
+  local os
+  os="$(uname | tr '[:upper:]' '[:lower:]')"
+  echo "${os}"
+}
+
+get_arch() {
+  local arch
+  arch="$(uname -m)"
+  case "${arch}" in
+  x86_64) arch="amd64" ;;
+  aarch64) arch="arm64" ;;
+  *)
+    echo "Unsupported architecture: ${arch}"
+    exit 1
+    ;;
   esac
-
-  echo "${OS}_${ARCH}"
+  echo "${arch}"
 }
 
 install_fzf() {
-  local os_arch=$(detect_os_arch)
-  local url="https://github.com/junegunn/fzf/releases/download/v${VERSION}/fzf-${VERSION}-${os_arch}.tar.gz"
-  curl -L "$url" | sudo tar xzf - -C /usr/local/bin --wildcards 'fzf' && chmod +x /usr/local/bin/fzf
+  local url
+  url="https://github.com/junegunn/fzf/releases/download/v${VERSION}/fzf-${VERSION}-$(get_os)_$(get_arch).tar.gz"
+  curl -L "${url}" | sudo tar xzf - -C "${BIN_DIR}" --wildcards 'fzf' && chmod +x "${BIN_DIR}/fzf"
 }
 
 configure_fzf() {
-  if [ "$ENABLE_CONFIG" = "true" ]; then
-    echo "source <(fzf --bash)" >> "$_REMOTE_USER_HOME/.bashrc"
-    echo "source <(fzf --zsh)" >> "$_REMOTE_USER_HOME/.zshrc"
-    echo "source <(fzf --bash)" >> "$_CONTAINER_USER_HOME/.bashrc"
-    echo "source <(fzf --zsh)" >> "$_CONTAINER_USER_HOME/.zshrc"
-  fi
+  for shell in "${shells[@]}"; do
+    for home in "${homes[@]}"; do
+      echo "source <(fzf --${shell})" >> "${home}/.${shell}rc"
+    done
+  done
 }
 
 install_fzf

@@ -15,9 +15,11 @@ Install eza
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
+| bin_dir | Select a directory that is on your PATH | string | /usr/local/bin |
 | version | Select an eza version | string | 0.20.13 |
 | theme | Select an eza theme | string | tokyonight |
 | enable_alias | Whether to create ls aliases for eza | boolean | true |
+| enable_icons | Whether to enable icons for eza | boolean | true |
 
 
 

@@ -1,52 +1,52 @@
 #!/bin/bash
 set -euo pipefail
 
-detect_os_arch() {
-  OS="$(uname | tr '[:upper:]' '[:lower:]')"
-  ARCH="$(uname -m)"
+BIN_DIR="${BIN_DIR:-"/usr/local/bin"}"
+VERSION="${VERSION:-"0.26.0"}"
+THEME="${THEME:-"j2udev"}"
+_REMOTE_USER_HOME="${_REMOTE_USER_HOME:-"/home/vscode"}"
+_CONTAINER_USER_HOME="${_CONTAINER_USER_HOME:-"/home/vscode"}"
 
-  case $ARCH in
-      x86_64) ARCH="amd64" ;;
-      armv8*|aarch64) ARCH="arm64" ;;
-      armv7*|armhf) ARCH="armv7" ;;
-      *) echo "Unsupported architecture: $ARCH"; exit 1 ;;
+shells=("zsh" "bash")
+homes=("${_REMOTE_USER_HOME}" "${_CONTAINER_USER_HOME}")
+
+get_os() {
+  local os
+  os="$(uname | tr '[:upper:]' '[:lower:]')"
+  echo "${os}"
+}
+
+get_arch() {
+  local arch
+  arch="$(uname -m)"
+  case "${arch}" in
+  x86_64) arch="amd64" ;;
+  aarch64) arch="arm64" ;;
+  *)
+    echo "Unsupported architecture: ${arch}"
+    exit 1
+    ;;
   esac
-
-  echo "${OS}-${ARCH}"
+  echo "${arch}"
 }
 
-install_oh_my_posh() {
-  local os_arch=$(detect_os_arch)
-  local url="https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v${VERSION}/posh-${os_arch}"
-  curl -Lo /usr/local/bin/oh-my-posh "$url" && chmod +x /usr/local/bin/oh-my-posh
+install_ohmyposh() {
+  local url
+  url="https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v${VERSION}/posh-$(get_os)-$(get_arch)"
+  curl -Lo "${BIN_DIR}/oh-my-posh" "${url}" && chmod +x "${BIN_DIR}/oh-my-posh"
 }
 
-configure_lang() {
-  echo "export LC_ALL=en_US.UTF-8" >> "$_REMOTE_USER_HOME/.bashrc"
-  echo "export LANG=en_US.UTF-8" >> "$_REMOTE_USER_HOME/.bashrc"
-  echo "export LC_ALL=en_US.UTF-8" >> "$_CONTAINER_USER_HOME/.bashrc"
-  echo "export LANG=en_US.UTF-8" >> "$_CONTAINER_USER_HOME/.bashrc"
-  echo "export LC_ALL=en_US.UTF-8" >> "$_REMOTE_USER_HOME/.zshrc"
-  echo "export LANG=en_US.UTF-8" >> "$_REMOTE_USER_HOME/.zshrc"
-  echo "export LC_ALL=en_US.UTF-8" >> "$_CONTAINER_USER_HOME/.zshrc"
-  echo "export LANG=en_US.UTF-8" >> "$_CONTAINER_USER_HOME/.zshrc"
+configure_ohmyposh() {
+  for shell in "${shells[@]}"; do
+    for home in "${homes[@]}"; do
+      mkdir -p "${home}/.config/oh-my-posh"
+      cp "themes/${THEME}.omp.json" "${home}/.config/oh-my-posh"
+      echo "export LC_ALL=en_US.UTF-8" >> "${home}/.${shell}rc"
+      echo "export LANG=en_US.UTF-8" >> "${home}/.${shell}rc"
+      echo "eval \"\$(oh-my-posh init ${shell} -c ${home}/.config/oh-my-posh/${THEME}.omp.json)\"" >> "${home}/.${shell}rc"
+    done
+  done
 }
 
-configure_theme() {
-  mkdir -p "${_REMOTE_USER_HOME}/.config/oh-my-posh"
-  mkdir -p "${_CONTAINER_USER_HOME}/.config/oh-my-posh"
-  cp "themes/${THEME}.omp.json" "${_REMOTE_USER_HOME}/.config/oh-my-posh"
-  cp "themes/${THEME}.omp.json" "${_CONTAINER_USER_HOME}/.config/oh-my-posh"
-  echo "eval \"\$(oh-my-posh init bash -c ${_REMOTE_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)\"" >> "$_REMOTE_USER_HOME/.bashrc"
-  echo "eval \"\$(oh-my-posh init bash -c ${_CONTAINER_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)\"" >> "$_CONTAINER_USER_HOME/.bashrc"
-  echo "eval \"\$(oh-my-posh init zsh -c ${_REMOTE_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)\"" >> "$_REMOTE_USER_HOME/.zshrc"
-  echo "eval \"\$(oh-my-posh init zsh -c ${_CONTAINER_USER_HOME}/.config/oh-my-posh/${THEME}.omp.json)\"" >> "$_CONTAINER_USER_HOME/.zshrc"
-}
-
-configure_oh_my_posh() {
-  configure_lang
-  configure_theme
-}
-
-install_oh_my_posh
-configure_oh_my_posh
+install_ohmyposh
+configure_ohmyposh

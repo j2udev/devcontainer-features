@@ -3,9 +3,17 @@
     "id": "eza",
     "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/eza",
     "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Install eza",
     "options": {
+        "bin_dir": {
+            "type": "string",
+            "proposals": [
+              "/usr/local/bin"
+            ],
+            "default": "/usr/local/bin",
+            "description": "Select a directory that is on your PATH"
+        },
         "version": {
             "type": "string",
             "proposals": ["0.20.13"],
@@ -29,6 +37,11 @@
             "type": "boolean",
             "default": true,
             "description": "Whether to create ls aliases for eza"
+        },
+        "enable_icons": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to enable icons for eza"
         }
     }
 }
