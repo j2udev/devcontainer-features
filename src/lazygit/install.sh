@@ -1,43 +1,52 @@
 #!/bin/bash
 set -euo pipefail
 
+BIN_DIR="${BIN_DIR:-"/usr/local/bin"}"
 VERSION="${VERSION:-"0.44.1"}"
 ENABLE_CONFIG="${ENABLE_CONFIG:-"true"}"
 ENABLE_ALIAS="${ENABLE_ALIAS:-"true"}"
+_REMOTE_USER_HOME="${_REMOTE_USER_HOME:-"/home/vscode"}"
+_CONTAINER_USER_HOME="${_CONTAINER_USER_HOME:-"/home/vscode"}"
 
-detect_os_arch() {
-  OS="$(uname | tr '[:upper:]' '[:lower:]')"
-  ARCH="$(uname -m)"
+shells=("zsh" "bash")
+homes=("${_REMOTE_USER_HOME}" "${_CONTAINER_USER_HOME}")
 
-  case $ARCH in
-      x86_64) ARCH="x86_64" ;;
-      armv8*|aarch64) ARCH="arm64" ;;
-      armv7*|armhf) ARCH="armv7" ;;
-      *) echo "Unsupported architecture: $ARCH"; exit 1 ;;
+get_os() {
+  local os
+  os="$(uname | tr '[:upper:]' '[:lower:]')"
+  echo "${os}"
+}
+
+get_arch() {
+  local arch
+  arch="$(uname -m)"
+  case "${arch}" in
+  x86_64) arch="x86_64" ;;
+  aarch64) arch="arm64" ;;
+  *)
+    echo "Unsupported architecture: ${arch}"
+    exit 1
+    ;;
   esac
-
-  echo "${OS}_${ARCH}"
+  echo "${arch}"
 }
 
 install_lazygit() {
-  local os_arch=$(detect_os_arch)
-  local url="https://github.com/jesseduffield/lazygit/releases/download/v${VERSION}/lazygit_${VERSION}_${os_arch}.tar.gz"
-  curl -L "$url" | tar xzf - -C /usr/local/bin --wildcards 'lazygit' && chmod +x /usr/local/bin/lazygit
+  local url
+  url="https://github.com/jesseduffield/lazygit/releases/download/v${VERSION}/lazygit_${VERSION}_$(get_os)_$(get_arch).tar.gz"
+  curl -L "${url}" | tar xzf - -C "${BIN_DIR}" --wildcards 'lazygit' && chmod +x "${BIN_DIR}/lazygit"
 }
 
 configure_lazygit() {
-  if [ "$ENABLE_CONFIG" = "true" ]; then
-    mkdir -p "$_REMOTE_USER_HOME/.config/lazygit"
-    mkdir -p "$_CONTAINER_USER_HOME/.config/lazygit"
-    cp config.yml "$_REMOTE_USER_HOME/.config/lazygit/config.yml"
-    cp config.yml "$_CONTAINER_USER_HOME/.config/lazygit/config.yml"
-  fi
-  if [ "$ENABLE_ALIAS" = "true" ]; then
-    echo "alias lzg='lazygit'" >> "$_REMOTE_USER_HOME/.bashrc"
-    echo "alias lzg='lazygit'" >> "$_REMOTE_USER_HOME/.zshrc"
-    echo "alias lzg='lazygit'" >> "$_CONTAINER_USER_HOME/.bashrc"
-    echo "alias lzg='lazygit'" >> "$_CONTAINER_USER_HOME/.zshrc"
-  fi
+  for shell in "${shells[@]}"; do
+    for home in "${homes[@]}"; do
+      mkdir -p "${home}/.config/lazygit"
+      cp config.yml "${home}/.config/lazygit/config.yml"
+      if [ "$ENABLE_ALIAS" = "true" ]; then
+        echo "alias lzg='lazygit'" >> "${home}/.${shell}rc"
+      fi
+    done
+  done
 }
 
 install_lazygit
