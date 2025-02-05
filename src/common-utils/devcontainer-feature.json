@@ -1,0 +1,32 @@
+{
+    "name": "Common Utilities",
+    "id": "common-utils",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/common-utils",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Create a default, non-root user and install common shell utilities",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "extensions": ["esbenp.prettier-vscode"]
+      }
+    },
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "configureZshAsDefaultShell": "true",
+            "installOhMyZsh": "false",
+            "installOhMyZshConfig": "false",
+            "username": "vscode",
+            "userUid": "1000",
+            "userGid": "1000"
+        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/j2udev/devcontainer-features/oh-my-posh:0": {},
+        "ghcr.io/j2udev/devcontainer-features/eza:0": {},
+        "ghcr.io/j2udev/devcontainer-features/bat:0": {},
+        "ghcr.io/j2udev/devcontainer-features/fzf:0": {},
+        "ghcr.io/j2udev/devcontainer-features/lazygit:0": {}
+    }
+}
