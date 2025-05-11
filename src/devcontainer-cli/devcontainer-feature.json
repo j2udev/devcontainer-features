@@ -1,0 +1,11 @@
+{
+    "name": "Devcontainer CLI",
+    "id": "devcontainer-cli",
+    "documentationURL": "https://github.com/j2udev/devcontainer-features/tree/main/src/devcontainer-cli",
+    "licenseURL": "https://github.com/j2udev/devcontainer-features/blob/main/LICENSE",
+    "version": "0.1.0",
+    "description": "Install Devcontainer CLI",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    }
+}
